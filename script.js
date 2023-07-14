@@ -1,13 +1,33 @@
 import { LoremIpsum } from 'https://cdn.jsdelivr.net/npm/lorem-ipsum@2.0.8/+esm';
 
-const lorem = (function () {
+(function () {
   const lorem = new LoremIpsum();
+  const numberInput = document.querySelector('.number-input');
+  const submitBtn = document.querySelector('.submit');
+  const copyBtn = document.querySelector('.copy');
+  const textOutput = document.querySelector('.text-output');
+
+  submitBtn.addEventListener('click', () =>
+    outputText(generateParagraphs(parseInt(numberInput.value)))
+  );
+
+  copyBtn.addEventListener('click', copyText);
+
   function generateParagraphs(numParagraphs) {
+    if (numParagraphs < 1 || numParagraphs > 20 || isNaN(numParagraphs)) {
+      numParagraphs = 1;
+    }
     return lorem.generateParagraphs(numParagraphs);
   }
-  return {
-    generateParagraphs,
-  };
-})();
 
-console.log(lorem.generateParagraphs(10));
+  function outputText(text) {
+    textOutput.value = text;
+  }
+
+  function copyText() {
+    console.log('copyText');
+    textOutput.select();
+    textOutput.setSelectionRange(0, 99999); // For mobile devices
+    navigator.clipboard.writeText(textOutput.value);
+  }
+})();
