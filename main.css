@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: roboto, 'sans serif';
+}
+
+/* Remove input arrows from number input - Chrome, Safari, Edge, Opera */
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.number-input[type='number'] {
+  -moz-appearance: textfield;
+}
