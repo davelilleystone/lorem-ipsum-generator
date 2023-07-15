@@ -14,12 +14,27 @@
     <script type="module" src="./script.js" defer></script>
   </head>
   <body>
-    <h1>Lorem Ipsum Generator</h1>
-    <input type="number" class="number-input" />
-    <button class="submit">Get Paragraphs</button>
-    <div class="text-wrapper">
-      <textarea class="text-output" cols="50" rows="50"></textarea>
+    <div class="main-container">
+      <h1>Lorem Ipsum Generator</h1>
+      <div class="paragraph-container">
+        <p>
+          Enter the required number of paragraphs of Lorem Ipsum text below and
+          click 'Get Paragraphs' to generate them.
+        </p>
+        <p>
+          The minimum number of paragraphs is 1, the maximum is 20. Anything
+          outside of that range will generate 1 paragraph.
+        </p>
+      </div>
+
+      <div class="input-submit-wrapper">
+        <input type="number" class="number-input" id="input" />
+        <button class="btn btn-submit">Get Paragraphs</button>
+      </div>
+      <div class="text-wrapper">
+        <textarea class="text-output"></textarea>
+      </div>
+      <button class="btn btn-copy">Copy Text</button>
     </div>
-    <button class="copy">Copy Text</button>
   </body>
 </html>
