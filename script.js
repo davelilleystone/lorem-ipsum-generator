@@ -3,8 +3,8 @@ import { LoremIpsum } from 'https://cdn.jsdelivr.net/npm/lorem-ipsum@2.0.8/+esm'
 (function () {
   const lorem = new LoremIpsum();
   const numberInput = document.querySelector('.number-input');
-  const submitBtn = document.querySelector('.submit');
-  const copyBtn = document.querySelector('.copy');
+  const submitBtn = document.querySelector('.btn-submit');
+  const copyBtn = document.querySelector('.btn-copy');
   const textOutput = document.querySelector('.text-output');
 
   submitBtn.addEventListener('click', () =>
@@ -25,7 +25,6 @@ import { LoremIpsum } from 'https://cdn.jsdelivr.net/npm/lorem-ipsum@2.0.8/+esm'
   }
 
   function copyText() {
-    console.log('copyText');
     textOutput.select();
     textOutput.setSelectionRange(0, 99999); // For mobile devices
     navigator.clipboard.writeText(textOutput.value);
