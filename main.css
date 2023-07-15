@@ -69,12 +69,11 @@ p {
   border: none;
   transition-duration: 0.4s;
   border-radius: 0.5rem;
-  background-color: #fff;
+  background-color: #0b4f6c;
+  color: #fff;
 }
 
 .btn:hover {
-  background-color: blue;
-  color: white;
   background-color: #53131e;
 }
 
