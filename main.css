@@ -2,10 +2,94 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid black; */
 }
 
 body {
   font-family: roboto, 'sans serif';
+  display: flex;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+.paragraph-container,
+.input-submit-wrapper,
+.text-wrapper {
+  margin: 1rem 0;
+}
+
+h1 {
+  text-align: center;
+  background-color: #0b4f6c;
+}
+
+p {
+  padding: 0.5rem;
+}
+
+.btn-copy {
+  padding: 0.5rem 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 3rem 0;
+  padding: 1rem;
+  background-color: #a0b9c6;
+  border-radius: 1rem;
+}
+
+.text-output {
+  width: 100%;
+  resize: none;
+  height: 40vh;
+  font-family: roboto, 'sans-serif';
+  font-size: 1rem;
+  line-height: inherit;
+  padding: 0.3em;
+}
+
+.number-input {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  transition-duration: 0.4s;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.btn:hover {
+  background-color: blue;
+  color: white;
+  background-color: #53131e;
+}
+
+.btn-submit {
+  padding: 0.4rem;
+}
+
+.number-input {
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.btn-copy {
+  width: 100%;
+  font-size: 1.2rem;
 }
 
 /* Remove input arrows from number input - Chrome, Safari, Edge, Opera */
